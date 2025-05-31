@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chess Tournament Match</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      background-image: repeating-linear-gradient(
+        45deg,
+        #ffffff,
+        #ffffff 40px,
+        #e0e0e0 40px,
+        #e0e0e0 80px
+      ),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><text x='5' y='30' font-size='30'>&#9817;</text></svg>");
+      background-repeat: repeat;
+      background-size: 80px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+      text-shadow: 1px 1px 2px gray;
+      background-color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 800px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      background-color: white;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #eee;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #ccc;
+    }
+
+    table, th, td {
+      border: 2px solid #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Chess Tournament Match</h1>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>VS To Who</th>
+      <th>Winner</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+    </tr>
+    <tr>
+      <td>Ishan</td>
+      <td>Rishabh</td>
+      <td>?</td>
+      <td>2:00 PM</td>
+      <td>2:30 PM</td>
+    </tr>
+    <tr>
+      <td>Siddhran</td>
+      <td>Mahir</td>
+      <td>Siddhran</td>
+      <td>10:00 AM</td>
+      <td>10:30 AM</td>
+    </tr>
+    <tr>
+      <td>Siddhran</td>
+      <td>Ishan</td>
+      <td>?</td>
+      <td>2:35 PM</td>
+      <td>2:50 PM</td>
+    </tr>
+    <tr>
+      <td>Mahir</td>
+      <td>Ishan</td>
+      <td>?</td>
+      <td>1:00 PM</td>
+      <td>2:00 PM</td>
+    </tr>
+  </table>
+
+</body>
+</html>
