@@ -1,66 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Free Ebook Download</title>
+  <meta charset="UTF-8">
+  <title>Minecraft in HTML (2D)</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #667eea, #764ba2);
-      color: white;
+      background: #88ccff;
+      font-family: Arial, sans-serif;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
-      text-align: center;
+      padding: 20px;
     }
-
-    .container {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    #game {
+      display: grid;
+      grid-template-columns: repeat(10, 40px);
+      grid-template-rows: repeat(10, 40px);
+      gap: 2px;
     }
-
-    h1 {
-      margin-bottom: 10px;
-      font-size: 2.5rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-
-    .download-btn {
-      padding: 15px 30px;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 30px;
-      background: #00c6ff;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
-      color: white;
+    .cell {
+      width: 40px;
+      height: 40px;
+      background-color: #eee;
+      border: 1px solid #ccc;
       cursor: pointer;
-      transition: transform 0.2s ease, background 0.3s ease;
     }
-
-    .download-btn:hover {
-      transform: scale(1.05);
-      background: linear-gradient(to right, #0072ff, #00c6ff);
-    }
+    .grass { background-color: #4CAF50; }
+    .dirt { background-color: #A0522D; }
+    .stone { background-color: #888; }
+    .water { background-color: #00f; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Your Free Ebook is Ready!</h1>
-    <p>Click the button below to start your download.</p>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-      <button class="download-btn">Download Now</button>
-    </a>
+  <div>
+    <h2>Minecraft Mini (Click to Place Blocks)</h2>
+    <p>Select Block: 
+      <button onclick="selectBlock('grass')">Grass</button>
+      <button onclick="selectBlock('dirt')">Dirt</button>
+      <button onclick="selectBlock('stone')">Stone</button>
+      <button onclick="selectBlock('water')">Water</button>
+    </p>
+    <div id="game"></div>
   </div>
+
+  <script>
+    const game = document.getElementById('game');
+    let selectedBlock = 'grass';
+
+    function selectBlock(type) {
+      selectedBlock = type;
+    }
+
+    for (let i = 0; i < 100; i++) {
+      const cell = document.createElement('div');
+      cell.classList.add('cell');
+      cell.addEventListener('click', () => {
+        cell.className = 'cell ' + selectedBlock;
+      });
+      game.appendChild(cell);
+    }
+  </script>
 </body>
 </html>
