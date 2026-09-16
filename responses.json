@@ -1,0 +1,21 @@
+{
+  "hello": {
+    "text": "Hello! 👋",
+    "gif": "https://media.giphy.com/media/111ebonMs90YLu/giphy.gif"
+  },
+
+  "hi": {
+    "text": "Hey! 😄",
+    "gif": "https://media.giphy.com/media/111ebonMs90YLu/giphy.gif"
+  },
+
+  "thanks": {
+    "text": "You're welcome! 😊",
+    "gif": "https://media.giphy.com/media/3oEdva9BUHPIs2SkGk/giphy.gif"
+  },
+
+  "bye": {
+    "text": "Bye! 👋",
+    "gif": "https://media.giphy.com/media/PSWCyXQj54nm7d8Z8Q/giphy.gif"
+  }
+}
