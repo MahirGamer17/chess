@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIF Auto Responder</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    #gif {
+      display: none;
+      width: 300px;
+      max-width: 90%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>GIF Auto Responder</h2>
+
+  <input id="message" type="text" placeholder="Type a message">
+  <button onclick="autoReply()">Send</button>
+
+  <div id="reply"></div>
+
+  <img id="gif"
+       src="reply.gif"
+       alt="Automatic GIF reply">
+
+  <script>
+    function autoReply() {
+      const message = document.getElementById("message").value.trim();
+
+      if (message === "") return;
+
+      // Hide text response
+      document.getElementById("reply").innerHTML = "";
+
+      // Show GIF response
+      document.getElementById("gif").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
